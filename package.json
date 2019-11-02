@@ -1,0 +1,8 @@
+{
+  "name": "prof-frisby",
+  "version": "1.0.0",
+  "main": "app.js",
+  "author": "valrob",
+  "license": "MIT",
+  "private": false
+}
