@@ -7,9 +7,9 @@ export const Right = x => ({
 })
 
 export const Left = x => ({
-  chain: f => Left(x), //chain and map do the same(?)
-  map: f => Left(x), // is more about how we use this for development
-  fold: (f,g) => f(x),
+  chain: () => Left(x), //chain and map do the same(?)
+  map: () => Left(x), // is more about how we use this for development
+  fold: (f) => f(x), //(f,g) => f(x),
 	inspect: () => `Box(${x})`
 })
 

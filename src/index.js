@@ -1,15 +1,24 @@
+const lg = x => console.log(x)
+
 //* composing
-// import {nexChartForNumberString, applyDiscount} from './examples/boxExamples'
-// console.log(nexChartForNumberString('64'))
+import {nexChartForNumberString, applyDiscount} from './examples/boxExamples'
+lg(nexChartForNumberString('64'))
 //* composing with multiple inputs
-// console.log(applyDiscount('$5.00', '20%'))
+lg(applyDiscount('$5.00', '20%'))
 
 
 //* Either
-// import {findColorResult, getPort} from './examples/eitherExamples'
-// console.log(getPort())
+import {findColorResult, getPort} from './examples/eitherExamples'
+lg(getPort())
+lg(findColorResult())
 
-//* Semigroup
+//* Semigroup examples
+// import {resSum, resAll, resFirst} from './examples/semigroupExamples'
+import {resSum, resAll, resFirst} from './examples/semigroupExamples'
+	lg(resSum)
+	lg(resAll)
+	lg(resFirst)
+
 
 
 

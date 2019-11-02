@@ -4,7 +4,7 @@
   "main": "app.js",
   "author": "valrob",
   "license": "MIT",
-  "private": false, 
+  "private": false,
   "scripts": {
     "dev": "nodemon -w src --exec \"babel-node src --presets es2015,stage-0\"",
     "test": "eslint src"
@@ -28,6 +28,8 @@
     "compression": "^1.5.2",
     "cors": "^2.7.1",
     "express": "^4.13.3",
+    "immutable": "^4.0.0-rc.12",
+    "immutable-ext": "^1.1.5",
     "morgan": "^1.8.0",
     "resource-router-middleware": "^0.6.0"
   },

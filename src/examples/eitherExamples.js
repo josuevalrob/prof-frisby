@@ -9,8 +9,8 @@ export const findColor = name =>
 export const findColorResult = () =>
   findColor('blue')
     .map( c => c.slice(1))
-    .fold(e => 'no color',
-          c => c.toUpperCase())
+    .fold(() => 'no color',
+          (c) => c.toUpperCase())
 
 
 // export const getPort = () => {
@@ -31,5 +31,5 @@ export const getPort = () =>
     // however the map will  force us to fold twice, one for the right and other for the left
     // but chain will return one of them. 
   .fold(
-    e => 3000,
+    () => 3000,
     c => c.port)

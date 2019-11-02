@@ -21,7 +21,7 @@ const percentToFloat = str =>
 	.map(n => n * 0.01)
 
 export const applyDiscount = (price, discount) =>
-	moneyToFLoat(price) //return a box
+	moneyToFLoat(price) //return a wrapped box
 	.fold(cost =>
 		percentToFloat(discount) //returns the discount
 			.fold(savings =>
