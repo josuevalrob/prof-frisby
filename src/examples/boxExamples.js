@@ -1,7 +1,15 @@
-import {Box} from '../utils/box'
+import {Box, LazyBox} from '../utils/box'
 //Composing
+// export const nexChartForNumberString = str =>
+// 	Box(str)
+// 		.map(s => s.trim())
+// 		.map(r => new Number(r))
+// 		.map(i => i + 1)
+// 		.map(i => String.fromCharCode(i))
+// 		.fold(c => c.toLowerCase())
+
 export const nexChartForNumberString = str =>
-	Box(str)
+	LazyBox(()=>str)
 		.map(s => s.trim())
 		.map(r => new Number(r))
 		.map(i => i + 1)

@@ -1,12 +1,17 @@
 import {Sum, All, First} from '../utils/semigroups'
-import {Map} from 'immutable-ext'
+import {Map, List} from 'immutable-ext'
 
-export const res = [1, 2].concat([3]).concat('c')
+// export const res = [1, 2].concat([3]).concat('c')
 export const resSum = Sum(1).concat(Sum(2)).inspect()
 export const resAll = All(true).concat(All(false)).inspect()
 export const resFirst = First("blah").concat(First('Icecream')).inspect()
 
-const acct1 = Map({name:First('Nico'), isPaid:All(true), points:Sum(10), friends:['Frank']})
-const acct2 = Map({name:First('Nico'), isPaid:false, points:2, friends:['Gatsby']})
+// export const res = [Sum(1), Sum(2), Sum(3)].reduce((acc, x)=>acc.concat(x), Sum.empty() ).inspect()
 
-export const acctResult = acct1.concat(acct2)
+export const resList = List.of(Sum(1), Sum(2), Sum(3)).fold(Sum.empty()).inspect()
+
+// export const res = Map({brian:3, sra:5})
+//                     .map(Sum)
+//                     .fold(Sum.empty()).inspect()
+
+export const res = Map({brian:3, sra:5}).foldMap(Sum, Sum.empty()).inspect()
